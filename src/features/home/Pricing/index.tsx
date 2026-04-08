@@ -18,7 +18,8 @@ export function Pricing() {
     const cards = el.querySelectorAll<HTMLElement>(".pricing-card");
     cards.forEach((c) => {
       (c as HTMLElement).style.opacity = "0";
-      (c as HTMLElement).style.transform = "translateY(60px) scale(0.88) rotateX(12deg)";
+      (c as HTMLElement).style.transform =
+        "translateY(60px) scale(0.88) rotateX(12deg)";
       (c as HTMLElement).style.transformOrigin = "top center";
     });
 
@@ -37,7 +38,7 @@ export function Pricing() {
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     observer.observe(el);

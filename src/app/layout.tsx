@@ -1,7 +1,7 @@
 import type React from "react";
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "@/providers";
+import { ThemeProvider, LenisProvider } from "@/providers";
 import { FloatingCursor } from "@/components";
 import type { Metadata } from "next";
 
@@ -60,7 +60,9 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
         >
-          {children}
+          <LenisProvider>
+            {children}
+          </LenisProvider>
         </ThemeProvider>
         <FloatingCursor />
       </body>

@@ -35,7 +35,7 @@ export function Process() {
           observer.disconnect();
         }
       },
-      { threshold: 0.08 }
+      { threshold: 0.08 },
     );
 
     observer.observe(el);

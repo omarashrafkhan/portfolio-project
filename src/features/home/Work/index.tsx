@@ -38,7 +38,7 @@ export function Work() {
           observer.disconnect();
         }
       },
-      { threshold: 0.08 }
+      { threshold: 0.08 },
     );
 
     observer.observe(el);
@@ -73,7 +73,11 @@ export function Work() {
 
         <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {workConfig.projects.map((project, index) => (
-            <div key={index} className="work-card" onMouseEnter={() => setActiveIndex(index)}>
+            <div
+              key={index}
+              className="work-card"
+              onMouseEnter={() => setActiveIndex(index)}
+            >
               <ProjectCard
                 title={project.title}
                 subtitle={project.subtitle}

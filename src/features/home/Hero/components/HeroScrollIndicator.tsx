@@ -5,7 +5,7 @@ import { animate, stagger } from "animejs";
 
 const stats = [
   { value: 50, suffix: "+", label: "Projects Delivered" },
-  { value: 3,  suffix: "+", label: "Years Experience" },
+  { value: 3, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Client Satisfaction" },
 ];
 
@@ -17,7 +17,10 @@ export function HeroScrollIndicator() {
     if (!el) return;
 
     const items = el.querySelectorAll<HTMLElement>(".hero-stat");
-    items.forEach((s) => { s.style.opacity = "0"; s.style.transform = "translateY(24px)"; });
+    items.forEach((s) => {
+      s.style.opacity = "0";
+      s.style.transform = "translateY(24px)";
+    });
 
     // Stagger the stat boxes in
     animate(items, {
@@ -50,14 +53,17 @@ export function HeroScrollIndicator() {
         {stats.map(({ value, suffix, label }) => (
           <div key={label} className="hero-stat flex-1 text-center px-8 py-5">
             <div className="text-2xl font-bold text-white tracking-tighter flex items-baseline justify-center gap-0.5">
-              <span className="stat-number tabular-nums" data-value={value}>0</span>
+              <span className="stat-number tabular-nums" data-value={value}>
+                0
+              </span>
               <span className="text-white/70">{suffix}</span>
             </div>
-            <div className="text-xs uppercase tracking-widest text-neutral-400 mt-1">{label}</div>
+            <div className="text-xs uppercase tracking-widest text-neutral-400 mt-1">
+              {label}
+            </div>
           </div>
         ))}
       </div>
     </div>
   );
 }
-
