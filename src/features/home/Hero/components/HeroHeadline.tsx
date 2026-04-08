@@ -11,7 +11,7 @@ export function HeroHeadline() {
           <div className={`hero-line-${index + 1}`}>
             <TextGenerateEffect
               words={headline.text}
-              className={`block text-6xl md:text-8xl lg:text-9xl font-black leading-none tracking-tighter ${headline.className}`}
+              className={`block text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black leading-none tracking-tighter ${headline.className}`}
               duration={0.5}
               speed={0.2}
               initialDelay={0.2 + index * 0.15}

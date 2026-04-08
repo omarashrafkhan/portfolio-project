@@ -15,7 +15,7 @@ export function Hero() {
   const { containerRef } = useHeroAnime();
 
   return (
-    <section className="relative flex items-center px-10 py-[100px] sm:py-[110px] overflow-hidden">
+    <section className="relative flex items-center px-4 sm:px-10 py-[80px] sm:py-[100px] lg:py-[110px] overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1a1a1a_0%,_#000_70%)]"></div>
         {/* Animated grid lines */}
@@ -57,7 +57,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="hero-shape">
+          <div className="hero-shape hidden md:block">
             <HeroShape ref={shapeRef} />
           </div>
         </div>

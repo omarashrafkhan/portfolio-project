@@ -51,7 +51,7 @@ export function HeroScrollIndicator() {
     <div ref={containerRef} className="mt-16 flex justify-center">
       <div className="flex items-stretch w-full max-w-2xl border border-neutral-800 divide-x divide-neutral-800">
         {stats.map(({ value, suffix, label }) => (
-          <div key={label} className="hero-stat flex-1 text-center px-8 py-5">
+          <div key={label} className="hero-stat flex-1 text-center px-2 sm:px-8 py-4 sm:py-5">
             <div className="text-2xl font-bold text-white tracking-tighter flex items-baseline justify-center gap-0.5">
               <span className="stat-number tabular-nums" data-value={value}>
                 0
