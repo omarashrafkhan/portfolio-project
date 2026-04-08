@@ -13,6 +13,9 @@
 # local mcp server (not needed for deployment)
 /animejs-mcp
 
+# yarn berry config (causes Vercel to pick Yarn over npm)
+.yarnrc.yml
+
 # testing
 /coverage
 
